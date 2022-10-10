@@ -1,0 +1,6 @@
+# Python project files
+env
+__pycache__
+.Python
+.vscode
+.pytest_cache
