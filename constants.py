@@ -7,6 +7,9 @@ class Endpoint:
     STARSHIPS = f'{SWAPI_DEV_API}starships/'
     VEHICLES = f'{SWAPI_DEV_API}vehicles/'
 
+class ResponseError:
+    METHOD_POST_NOT_ALLOWED = "Method 'POST' not allowed."
+    
 class StatusCode:
     METHOD_NOT_ALLOWED_405 = 405
     OK_200 = 200
