@@ -9,9 +9,9 @@ class People(Validator):
         self.app = app
 
     @log("Get for People endpoint")
-    def get(self, method="GET") -> Response:
+    def get(self, method="GET", params=None) -> Response:
         response = self.app.client.request(
             method = method,
-            url=f"{Endpoint.PEOPLE}",
+            url = self.return_endpoint_url(Endpoint.PEOPLE, params),
         )
         return self.structure(response)

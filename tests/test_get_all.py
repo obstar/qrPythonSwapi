@@ -4,7 +4,6 @@ from constants import StatusCode
 
 def test_get_all_is_successful(call):
     response = call.swapi.get_all()
-
     assert response.status_code == StatusCode.OK_200
     assert response.data['films'] == Endpoint.FILMS
     assert response.data['people'] == Endpoint.PEOPLE
