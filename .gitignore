@@ -1,5 +1,6 @@
 # Python project files
 env
+reports
 __pycache__
 .Python
 .vscode
