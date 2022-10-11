@@ -1,5 +1,6 @@
 from api.calls.people import People
 from api.calls.planets import Planets
+from api.calls.starships import Starships
 from api.calls.swapi import Swapi
 from api.client import Client
 from api.validator import Validator
@@ -12,6 +13,7 @@ class Call(Validator):
         self.client = Client
         self.people = People(self)
         self.planets = Planets(self)
+        self.starships = Starships(self)        
         self.swapi = Swapi(self)
 
     @log("Get by endpoint")
