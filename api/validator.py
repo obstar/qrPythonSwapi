@@ -1,9 +1,11 @@
+import json
+from types import SimpleNamespace
 from requests import Response
 
 class Validator:
     @staticmethod
     def structure(response: Response) -> Response:
-        response.data = response.json()
+        response.data = json.loads(response.text, object_hook=lambda d: SimpleNamespace(**d))
         return response
 
     @staticmethod
