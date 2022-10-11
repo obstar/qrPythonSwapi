@@ -5,13 +5,14 @@ from common.logger import logging as log
 
 
 class People(Validator):
-    def __init__(self, app):
-        self.app = app
+    def __init__(self, call):
+        self.call = call
 
     @log("Get for People endpoint")
-    def get(self, method="GET", params=None) -> Response:
-        response = self.app.client.request(
+    def get(self, method="GET", params=None, is_json=True) -> Response:
+        response = self.call.client.request(
             method = method,
             url = self.return_endpoint_url(Endpoint.PEOPLE, params),
         )
-        return self.structure(response)
+        if is_json: return self.structure(response)
+        else: return response

@@ -13,3 +13,8 @@ class ResponseError:
 class StatusCode:
     METHOD_NOT_ALLOWED_405 = 405
     OK_200 = 200
+    REQUEST_URI_TOO_LARGE_414 = 414
+
+class InputData:
+    LUKE_SKYWALKER = "Luke Skywalker"
+    TOO_LARGE = '{:s^600}'.format('s').replace('s', LUKE_SKYWALKER)
