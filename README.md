@@ -57,3 +57,16 @@ allure serve ./reports/allure_results
 3. pytest-timeout
 4. requests
 5. allure-pytest for reports
+
+## Improvemnts
+
+There is plenty room for refactor I could:
+
+- extract asserts to some helper module
+- handle better constants.py to use and store data need it by tests
+- add more negative tests around each endpoint
+- test full content of response bodies returned by service
+
+## Estimation
+
+It took me around 2 working days, of which half day I've tried to implement pytest-bdd but I didn't continue with that.
