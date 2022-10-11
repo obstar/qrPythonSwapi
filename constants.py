@@ -17,4 +17,5 @@ class StatusCode:
 
 class InputData:
     LUKE_SKYWALKER = "Luke Skywalker"
+    TATOOINE = "Tatooine"
     TOO_LARGE = '{:s^600}'.format('s').replace('s', LUKE_SKYWALKER)
