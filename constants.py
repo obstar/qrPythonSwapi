@@ -16,6 +16,7 @@ class StatusCode:
     REQUEST_URI_TOO_LARGE_414 = 414
 
 class TestData:
+    CR_90_CORVETTE = "CR90 corvette"
     LUKE_SKYWALKER = "Luke Skywalker"
     TATOOINE = "Tatooine"
     TOO_LARGE = '{:s^600}'.format('s').replace('s', LUKE_SKYWALKER)
