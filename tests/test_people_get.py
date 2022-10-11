@@ -1,4 +1,4 @@
-from constants import Endpoint, InputData, ResponseError
+from constants import Endpoint, TestData, ResponseError
 from constants import StatusCode
 
 
@@ -15,7 +15,7 @@ def test_people_get_all_is_successful(call):
 def test_people_get_by_id_is_successful(call):
     response = call.people.get(params="1/")
     assert response.status_code == StatusCode.OK_200
-    assert response.data.name == InputData.LUKE_SKYWALKER
+    assert response.data.name == TestData.LUKE_SKYWALKER
 
 
 def test_people_post_is_not_allowed(call):

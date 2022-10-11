@@ -1,4 +1,4 @@
-from constants import Endpoint, InputData, ResponseError
+from constants import Endpoint, TestData, ResponseError
 from constants import StatusCode
 
 
@@ -15,7 +15,7 @@ def test_planets_get_all_is_successful(call):
 def test_planets_get_by_id_is_successful(call):
     response = call.planets.get(params="1/")
     assert response.status_code == StatusCode.OK_200
-    assert response.data.name == InputData.TATOOINE
+    assert response.data.name == TestData.TATOOINE
 
 
 def test_planets_post_is_not_allowed(call):

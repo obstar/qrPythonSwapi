@@ -15,7 +15,7 @@ class StatusCode:
     OK_200 = 200
     REQUEST_URI_TOO_LARGE_414 = 414
 
-class InputData:
+class TestData:
     LUKE_SKYWALKER = "Luke Skywalker"
     TATOOINE = "Tatooine"
     TOO_LARGE = '{:s^600}'.format('s').replace('s', LUKE_SKYWALKER)
