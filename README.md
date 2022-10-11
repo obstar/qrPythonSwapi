@@ -58,7 +58,7 @@ allure serve ./reports/allure_results
 4. requests
 5. allure-pytest for reports
 
-## Improvemnts
+## Improvements
 
 There is plenty room for refactor I could:
 
@@ -66,6 +66,7 @@ There is plenty room for refactor I could:
 - handle better constants.py to use and store data need it by tests
 - add more negative tests around each endpoint
 - test full content of response bodies returned by service
+- etc..
 
 ## Estimation
 
