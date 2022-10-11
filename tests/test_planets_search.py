@@ -4,11 +4,11 @@ from constants import TestData, StatusCode
 
 def test_planets_get_search_is_successful(call):
     """
-        1. Query planets to get Tatooine data
-        2. Validate response data
-        3. Loop through films
-        4. For each film endpoint assert that status code is 200 OK 
-        5. Assert that searched planet is on the planets list of the validated film
+    1. Query planets to get Tatooine data
+    2. Validate response data
+    3. Loop through films
+    4. For each film endpoint assert that status code is 200 OK 
+    5. Assert that searched planet is on the planets list of the validated film
     """
     response_tatooine = call.planets.get(params=f"?search={TestData.TATOOINE}")
     assert response_tatooine.status_code == StatusCode.OK_200

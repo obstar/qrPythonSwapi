@@ -4,11 +4,11 @@ from constants import TestData, StatusCode
 
 def test_people_get_search_is_successful(call):
     """
-        1. Query people to get luke skywalker data
-        2. Validate response data
-        3. Loop through films
-        4. For each film endpoint assert that status code is 200 OK 
-        5. Assert that searched character is on the character list of the validated film
+    1. Query people to get luke skywalker data
+    2. Validate response data
+    3. Loop through films
+    4. For each film endpoint assert that status code is 200 OK 
+    5. Assert that searched character is on the character list of the validated film
     """
     response_luke = call.people.get(params=f"?search={TestData.LUKE_SKYWALKER}")
     assert response_luke.status_code == StatusCode.OK_200
