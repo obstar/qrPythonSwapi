@@ -21,6 +21,6 @@ def test_people_get_search_is_successful(call):
         assert response_luke.data.results[0].url in response_film.data.characters
 
 
-def test_people_get_uri_is_too_large(call):
+def test_people_get_search_uri_is_too_large(call):
     response = call.people.get(params=f"?search={TestData.TOO_LARGE}", is_json=False)
     assert response.status_code == StatusCode.REQUEST_URI_TOO_LARGE_414
