@@ -18,5 +18,6 @@ class StatusCode:
 class TestData:
     CR_90_CORVETTE = "CR90 corvette"
     LUKE_SKYWALKER = "Luke Skywalker"
+    SAND_CRAWLER = "Sand Crawler"
     TATOOINE = "Tatooine"
     TOO_LARGE = '{:s^600}'.format('s').replace('s', LUKE_SKYWALKER)
