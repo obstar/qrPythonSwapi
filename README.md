@@ -1,11 +1,28 @@
 # Libraries used by project:
 
 1. Python 3.9 and higher
-2. Pytest
-3. Requests
-4. Allure Framework for reports
+2. pytest
+3. pytest-timeout
+4. requests
+5. allure-pytest for reports
 
-## How to run tests manually:
+## How to run tests
+
+pre-installed on local:
+
+- [allure commandline](https://docs.qameta.io/allure-report/#_installing_a_commandline)
+- [python 3.9 or higher](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
+
+### by script
+
+Run script
+
+```
+test.sh
+```
+
+### manually:
 
 1. Create virtual env
 
@@ -32,7 +49,6 @@ pytest --alluredir=./reports/allure_results
 ```
 
 5. Generate report
-   pre: [allure commandline](https://docs.qameta.io/allure-report/#_installing_a_commandline) need to be installed on local
 
 ```
 allure serve ./reports/allure_results
