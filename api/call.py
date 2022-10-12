@@ -5,7 +5,7 @@ from api.calls.swapi import Swapi
 from api.calls.vehicles import Vehicles
 from api.client import Client
 from api.validator import Validator
-from common.logger import logging as log
+from utils.logger import logging as log
 from requests import Response
 
 class Call(Validator):

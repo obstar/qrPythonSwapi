@@ -1,7 +1,7 @@
 from requests import Response
 from api.validator import Validator
 from constants import Endpoint
-from common.logger import logging as log
+from utils.logger import logging as log
 
 
 class People(Validator):
