@@ -62,7 +62,7 @@ allure serve ./reports/allure_results
 
 There is plenty room for refactor I could:
 
-- extract asserts to some helper module
+- extract asserts to some helper module .e.g new folder/package helpers > asserts.py etc
 - handle better constants.py to use and store data need it by tests
 - add more negative tests around each endpoint
 - test full content of response bodies returned by service
