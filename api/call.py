@@ -5,8 +5,9 @@ from api.calls.swapi import Swapi
 from api.calls.vehicles import Vehicles
 from api.client import Client
 from api.validator import Validator
-from utils.logger import logging as log
+from constants import HttpMethod
 from requests import Response
+from utils.logger import logging as log
 
 class Call(Validator):
     def __init__(self):
@@ -22,7 +23,7 @@ class Call(Validator):
     @staticmethod
     def get_by_endpoint(self, url) -> Response:
         response = self.client.request(
-            method = "GET",
+            method = HttpMethod.GET,
             url = url,
         )
         return self.structure(response)

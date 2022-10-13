@@ -7,6 +7,10 @@ class Endpoint:
     STARSHIPS = f'{SWAPI_DEV_API}starships/'
     VEHICLES = f'{SWAPI_DEV_API}vehicles/'
 
+class HttpMethod:
+    GET = "GET"
+    POST = "POST"
+
 class ResponseError:
     METHOD_POST_NOT_ALLOWED = "Method 'POST' not allowed."
     

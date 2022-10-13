@@ -1,6 +1,6 @@
 from requests import Response
 from api.validator import Validator
-from constants import Endpoint
+from constants import Endpoint, HttpMethod
 from utils.logger import logging as log
 
 
@@ -9,7 +9,7 @@ class Vehicles(Validator):
         self.call = call
 
     @log("Get for Vehicles endpoint")
-    def get(self, method="GET", params=None, is_json=True) -> Response:
+    def get(self, method=HttpMethod.GET, params=None, is_json=True) -> Response:
         response = self.call.client.request(
             method = method,
             url = self.return_endpoint_url(Endpoint.VEHICLES, params),

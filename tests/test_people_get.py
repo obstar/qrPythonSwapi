@@ -1,4 +1,4 @@
-from constants import Endpoint, TestData, ResponseError
+from constants import Endpoint, HttpMethod, TestData, ResponseError
 from constants import StatusCode
 
 
@@ -19,6 +19,6 @@ def test_people_get_by_id_is_successful(call):
 
 
 def test_people_post_is_not_allowed(call):
-    response = call.people.get(method="POST")
+    response = call.people.get(method=HttpMethod.POST)
     assert response.status_code == StatusCode.METHOD_NOT_ALLOWED_405
     assert response.data.detail == ResponseError.METHOD_POST_NOT_ALLOWED

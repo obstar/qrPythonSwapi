@@ -1,4 +1,4 @@
-from constants import Endpoint, ResponseError
+from constants import Endpoint, HttpMethod, ResponseError
 from constants import StatusCode
 
 
@@ -15,6 +15,6 @@ def test_get_all_is_successful(call):
 
 
 def test_post_all_is_not_allowed(call):
-    response = call.swapi.get_all(method="POST")
+    response = call.swapi.get_all(method=HttpMethod.POST)
     assert response.status_code == StatusCode.METHOD_NOT_ALLOWED_405
     assert response.data.detail == ResponseError.METHOD_POST_NOT_ALLOWED
