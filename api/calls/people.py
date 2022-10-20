@@ -11,8 +11,10 @@ class People(Validator):
     @log("Get for People endpoint")
     def get(self, method=HttpMethod.GET, params=None, is_json=True) -> Response:
         response = self.call.client.request(
-            method = method,
-            url = self.return_endpoint_url(Endpoint.PEOPLE, params),
+            method=method,
+            url=self.return_endpoint_url(Endpoint.PEOPLE, params),
         )
-        if is_json: return self.structure(response)
-        else: return response
+        if is_json:
+            return self.structure(response)
+        else:
+            return response

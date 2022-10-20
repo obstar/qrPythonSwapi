@@ -2,7 +2,6 @@ from constants import Endpoint, HttpMethod, TestData, ResponseError
 from constants import StatusCode
 
 
-
 def test_starships_get_all_is_successful(call):
     response = call.starships.get()
     assert response.status_code == StatusCode.OK_200

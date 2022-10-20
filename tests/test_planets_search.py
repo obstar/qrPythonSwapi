@@ -1,7 +1,6 @@
 from constants import TestData, StatusCode
 
 
-
 def test_planets_get_search_is_successful(call):
     """
     1. Query planets to get Tatooine data

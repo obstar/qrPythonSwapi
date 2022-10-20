@@ -2,7 +2,6 @@ from constants import Endpoint, HttpMethod, ResponseError
 from constants import StatusCode
 
 
-
 def test_get_all_is_successful(call):
     response = call.swapi.get_all()
     assert response.status_code == StatusCode.OK_200

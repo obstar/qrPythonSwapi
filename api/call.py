@@ -9,21 +9,21 @@ from constants import HttpMethod
 from requests import Response
 from utils.logger import logging as log
 
+
 class Call(Validator):
     def __init__(self):
-
         self.client = Client
         self.people = People(self)
         self.planets = Planets(self)
-        self.starships = Starships(self)        
+        self.starships = Starships(self)
         self.swapi = Swapi(self)
-        self.vehicles = Vehicles(self)   
+        self.vehicles = Vehicles(self)
 
     @log("Get by endpoint")
     @staticmethod
     def get_by_endpoint(self, url) -> Response:
         response = self.client.request(
-            method = HttpMethod.GET,
-            url = url,
+            method=HttpMethod.GET,
+            url=url,
         )
         return self.structure(response)

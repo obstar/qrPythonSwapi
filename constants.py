@@ -7,17 +7,21 @@ class Endpoint:
     STARSHIPS = f'{SWAPI_DEV_API}starships/'
     VEHICLES = f'{SWAPI_DEV_API}vehicles/'
 
+
 class HttpMethod:
     GET = "GET"
     POST = "POST"
 
+
 class ResponseError:
     METHOD_POST_NOT_ALLOWED = "Method 'POST' not allowed."
-    
+
+
 class StatusCode:
     METHOD_NOT_ALLOWED_405 = 405
     OK_200 = 200
     REQUEST_URI_TOO_LARGE_414 = 414
+
 
 class TestData:
     CR_90_CORVETTE = "CR90 corvette"

@@ -11,8 +11,10 @@ class Planets(Validator):
     @log("Get for Planets endpoint")
     def get(self, method=HttpMethod.GET, params=None, is_json=True) -> Response:
         response = self.call.client.request(
-            method = method,
-            url = self.return_endpoint_url(Endpoint.PLANETS, params),
+            method=method,
+            url=self.return_endpoint_url(Endpoint.PLANETS, params),
         )
-        if is_json: return self.structure(response)
-        else: return response
+        if is_json:
+            return self.structure(response)
+        else:
+            return response

@@ -1,7 +1,6 @@
 from constants import TestData, StatusCode
 
 
-
 def test_starships_get_search_is_successful(call):
     """
     1. Query starships to get CR90 corvette data

@@ -1,7 +1,6 @@
 from constants import TestData, StatusCode
 
 
-
 def test_people_get_search_is_successful(call):
     """
     1. Query people to get luke skywalker data

@@ -2,7 +2,6 @@ from constants import Endpoint, HttpMethod, TestData, ResponseError
 from constants import StatusCode
 
 
-
 def test_vehicles_get_all_is_successful(call):
     response = call.vehicles.get()
     assert response.status_code == StatusCode.OK_200

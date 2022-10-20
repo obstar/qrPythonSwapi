@@ -1,7 +1,6 @@
 from constants import TestData, StatusCode
 
 
-
 def test_vehicles_get_search_is_successful(call):
     """
     1. Query vehicles to get CR90 corvette data

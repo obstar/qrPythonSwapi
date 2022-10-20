@@ -2,6 +2,7 @@ import json
 from types import SimpleNamespace
 from requests import Response
 
+
 class Validator:
     @staticmethod
     def structure(response: Response) -> Response:

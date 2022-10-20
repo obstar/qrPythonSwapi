@@ -11,7 +11,7 @@ class Swapi(Validator):
     @log("Get all for root")
     def get_all(self, method=HttpMethod.GET) -> Response:
         response = self.call.client.request(
-            method = method,
+            method=method,
             url=f"{Endpoint.SWAPI_DEV_API}",
         )
         return self.structure(response)
